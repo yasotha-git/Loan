@@ -1,0 +1,529 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Finance HTML-5 Template </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.ico')}}">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slicknav.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+</head>
+<style>
+/* Style for the custom alert box */
+.custom-alert {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28a745;
+    /* Success green */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+    display: none;
+    /* Initially hidden */
+}
+</style>
+
+<body>
+    <!-- Success Message -->
+    @if(session('success'))
+    <div class="custom-alert" id="customAlert">
+        {{ session('success') }}
+    </div>
+    @endif
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo/logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header  header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="services.html">Services</a></li>
+                                            <li class="active"><a href="blog.html">Blog</a>
+                                                <ul class="submenu">
+                                                    <li><a href="blog.html">Blog</a></li>
+                                                    <li><a href="blog_details.html">Blog Details</a></li>
+                                                    <li><a href="elements.html">Element</a></li>
+                                                    <li><a href="apply.html">Apply Now</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="header-right-btn f-right d-none d-lg-block">
+                                    <a href="#" class="btn header-btn">+880.762.009.00 </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+
+        <!-- Hero Start-->
+        <div class="hero-area2  slider-height2 hero-overly2 d-flex align-items-center ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center pt-50">
+                            <h2>Apply Form</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Hero End -->
+        <!-- Apply Area Start -->
+        <div class="apply-area pt-150 pb-150">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="apply-wrapper">
+
+
+                            <!-- Form -->
+                            <!-- <form method="POST" action="submit_enquiry.php"> -->
+                            <form method="POST" action="{{ route('applySubmit') }}" class="form-floating"
+                                enctype="multipart/form-data">
+                                @csrf
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="single-form">
+                                            <label>* LOAN AMOUNT ($) </label>
+                                            <input type="text" name="loan_amount" id="loan_amount"
+                                                placeholder="Enter name">
+                                        </div>
+                                    </div>
+                                    <!-- Nice Select -->
+                                    <!-- <div class="col-lg-6">
+                                        <div class="single-form">
+                                            <label>* PURPOSE OF LOAN </label>
+                                            <div class="select-option mb-10">
+                                                <select name="select" id="select1">
+                                                    <option value="">Choose Categories</option>
+                                                    <option value="">Category 1</option>
+                                                    <option value="">Category 2</option>
+                                                    <option value="">Category 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <div class="col-lg-6">
+                                        <div class="single-form">
+                                            <label>* PURPOSE OF LOAN </label>
+                                            <div class="select-option mb-10">
+                                                <select name="loan_purpose" id="select1">
+                                                    <option value="">Choose Categories</option>
+                                                    <option value="personal">Personal Expenses</option>
+                                                    <option value="home_purchase">Home Purchase</option>
+                                                    <option value="auto">Auto Purchase</option>
+                                                    <option value="education">Education</option>
+                                                    <option value="business">Business Expansion</option>
+                                                    <option value="medical">Medical Expenses</option>
+                                                    <option value="debt_consolidation">Debt Consolidation</option>
+                                                    <option value="home_improvement">Home Improvement</option>
+                                                    <option value="travel">Travel</option>
+                                                    <option value="emergency">Emergency Fund</option>
+                                                    <option value="construction">Construction</option>
+                                                    <option value="green_energy">Green Energy Projects</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Radio -->
+                                    <div class="col-lg-12">
+                                        <div class="single-form d-flex">
+                                            <label>* Select Gender :</label>
+                                            <!-- Radio Select -->
+                                            <div class="select-radio6">
+                                                <div class="radio">
+                                                    <input id="male" name="gender" type="radio" value="Male" checked>
+                                                    <label for="male" class="radio-label">Male</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <input id="female" name="gender" type="radio" value="Female">
+                                                    <label for="female" class="radio-label">Female</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <input id="other" name="gender" type="radio" value="Other">
+                                                    <label for="other" class="radio-label">Other</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- First Name -->
+                                    <div class="col-lg-6">
+                                        <div class="single-form">
+                                            <label>* FIRST NAME</label>
+                                            <input type="text" name="first_name" placeholder="Enter name">
+                                        </div>
+                                    </div>
+                                    <!-- Last Name -->
+                                    <div class="col-lg-6">
+                                        <div class="single-form">
+                                            <label>* Last NAME</label>
+                                            <input type="text" name="last_name" placeholder="Enter name">
+                                        </div>
+                                    </div>
+                                    <!-- Nice Select -->
+                                    <!-- Nice Select -->
+                                    <!-- <div class="col-lg-12">
+                                        <div class="single-form">
+                                            <label>* NUMBER OF DEPENDANTS</label>
+                                            <div class="select-option mb-10">
+                                                <select name="select" id="select1">
+                                                    <option value="">Choose Option</option>
+                                                    <option value="">Category 1</option>
+                                                    <option value="">Category 2</option>
+                                                    <option value="">Category 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="col-lg-12">
+                                        <div class="single-form">
+                                            <label>* NUMBER OF DEPENDANTS</label>
+                                            <div class="select-option mb-10">
+                                                <select name="number_of_dependants" id="select1">
+                                                    <option value="">Choose Option</option>
+                                                    <option value="1">1 Dependant</option>
+                                                    <option value="2">2 Dependants</option>
+                                                    <option value="3">3 Dependants</option>
+                                                    <option value="4">4 Dependants</option>
+                                                    <option value="5">5 Dependants</option>
+                                                    <option value="6">6 Dependants</option>
+                                                    <option value="7">7 or More Dependants</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- First Name -->
+                                    <div class="col-lg-6">
+                                        <div class="single-form">
+                                            <label>* Email Adderess</label>
+                                            <input type="email" name="email" placeholder="Enter email">
+                                        </div>
+                                    </div>
+                                    <!-- Last Name -->
+                                    <div class="col-lg-6">
+                                        <div class="single-form">
+                                            <label>* Phone Number</label>
+                                            <input type="text" name="mobile_no" placeholder="Enter Number">
+                                        </div>
+                                    </div>
+                                    <!-- Nice Select -->
+                                    <!-- <div class="col-lg-12">
+                                        <div class="single-form">
+                                            <label>* MARITAL STATUS</label>
+                                            <div class="select-option mb-10">
+                                                <select name="select" id="select1">
+                                                    <option value="">Choose Categories</option>
+                                                    <option value="">Category 1</option>
+                                                    <option value="">Category 2</option>
+                                                    <option value="">Category 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <div class="col-lg-12">
+                                        <div class="single-form">
+                                            <label>* MARITAL STATUS</label>
+                                            <div class="select-option mb-10">
+                                                <select name="marital_status" id="select1">
+                                                    <option value="">Choose Marital Status</option>
+                                                    <option value="single">Single</option>
+                                                    <option value="married">Married</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- First Name -->
+                                    <div class="col-lg-6">
+                                        <div class="single-form">
+                                            <label>* FIRST NAME</label>
+                                            <input type="text" name="parents_name" placeholder="Enter name">
+                                        </div>
+                                    </div>
+                                    <!-- TOWN/CITY-->
+                                    <div class="col-lg-6">
+                                        <div class="single-form">
+                                            <label>* TOWN/CITY</label>
+                                            <input type="text" name="city" placeholder="Enter city">
+                                        </div>
+                                    </div>
+                                    <!-- Street Address -->
+                                    <div class="col-lg-6">
+                                        <div class="single-form">
+                                            <label>* STREET</label>
+                                            <input type="text" name="street" placeholder="Enter Street Address">
+                                        </div>
+                                    </div>
+                                    <!-- HOUSE NAME/NUMBER -->
+                                    <div class="col-lg-6">
+                                        <div class="single-form">
+                                            <label>* HOUSE NAME/NUMBER</label>
+                                            <input type="text" name="house_no" placeholder="Enter House Name">
+                                        </div>
+                                    </div>
+                                    <!-- Nice Select -->
+                                    <div class="col-lg-12">
+                                        <div class="single-form">
+                                            <label>* HOMEOWNER STATUS </label>
+                                            <div class="select-option mb-10">
+                                                <select name="homeowner_status" id="select1" required>
+                                                    <option value="">Select Homeowner Status</option>
+                                                    <option value="owner">Owner</option>
+                                                    <option value="renter">Renter</option>
+                                                    <option value="other">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--  EMPLOYMENT INDUSTRY -->
+                                    <div class="col-lg-6">
+                                        <div class="single-form">
+                                            <label>* EMPLOYMENT INDUSTRY</label>
+                                            <input type="text" name="industry" placeholder="Enter INDUSTRY">
+                                        </div>
+                                    </div>
+                                    <!-- Last Name -->
+                                    <div class="col-lg-6">
+                                        <div class="single-form">
+                                            <label>* EMPLOYER NAME</label>
+                                            <input type="text" name="emp_name" placeholder="Enter name">
+                                        </div>
+                                    </div>
+                                    <!--PHONE NUMBER -->
+                                    <div class="col-lg-6">
+                                        <div class="single-form">
+                                            <label>* WORK PHONE NUMBER</label>
+                                            <input type="number" name="work_pheno" placeholder="Phone Number">
+                                        </div>
+                                    </div>
+                                    <!--  MONTHLY INCOME -->
+                                    <div class="col-lg-6">
+                                        <div class="single-form">
+                                            <label>* MONTHLY INCOME ($)</label>
+                                            <input type="text" name="income" placeholder="Enter name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn apply-btn mt-30">APPLY NOW</button>
+
+                            </form>
+                            <!-- End From -->
+                            <!-- Form btn -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Apply Area End -->
+
+    </main>
+    <footer>
+        <!-- Footer Start-->
+        <div class="footer-area">
+            <div class="container">
+                <div class="footer-top footer-padding">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="single-footer-caption mb-30">
+                                    <!-- logo -->
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    </div>
+                                    <div class="footer-pera">
+                                        <p>Heaven fruitful doesn't over lesser days appear creeping seasons so behold
+                                            bearing</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Quick Link</h4>
+                                    <ul>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Offers & Discounts</a></li>
+                                        <li><a href="#">Get Coupon</a></li>
+                                        <li><a href="#"> Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>New Products</h4>
+                                    <ul>
+                                        <li><a href="#">Woman Cloth</a></li>
+                                        <li><a href="#">Fashion Accessories</a></li>
+                                        <li><a href="#">Man Accessories</a></li>
+                                        <li><a href="#">Rubber made Toys</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Support</h4>
+                                    <ul>
+                                        <li><a href="#">Frequently Asked Questions</a></li>
+                                        <li><a href="#">Terms & Conditions</a></li>
+                                        <li><a href="#"> Privacy Policy</a></li>
+                                        <li><a href="#">Report a Payment Issue</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="footer-copy-right">
+                                <p>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>
+                                    document.write(new Date().getFullYear());
+                                    </script> All rights reserved | This template is made with <i class="fa fa-heart"
+                                        aria-hidden="true"></i> by <a href="https://colorlib.com"
+                                        target="_blank">Colorlib</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                            <div class="footer-social f-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top">
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+    <!-- JS here -->
+    <!-- All JS Custom Plugins Link Here here -->
+    <script src=" {{ asset('assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src=" {{ asset('assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
+    <script src=" {{ asset('assets/js/popper.min.js')}}"></script>
+    <script src=" {{ asset('assets/js/bootstrap.min.js')}}"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src=" {{ asset('assets/js/jquery.slicknav.min.js')}}"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src=" {{ asset('assets/js/owl.carousel.min.js')}}"></script>
+    <script src=" {{ asset('assets/js/slick.min.js')}}"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src=" {{ asset('assets/js/wow.min.js')}}"></script>
+    <script src=" {{ asset('assets/js/animated.headline.js')}}"></script>
+    <script src=" {{ asset('assets/js/jquery.magnific-popup.js')}}"></script>
+
+    <!-- Nice-select, sticky -->
+    <script src=" {{ asset('assets/js/jquery.nice-select.min.js')}}"></script>
+    <script src=" {{ asset('assets/js/jquery.sticky.js')}}"></script>
+
+    <!-- contact js -->
+    <script src=" {{ asset('assets/js/contact.js')}}"></script>
+    <script src=" {{ asset('assets/js/jquery.form.js')}}"></script>
+    <script src=" {{ asset('assets/js/jquery.validate.min.js')}}"></script>
+    <script src=" {{ asset('assets/js/mail-script.js')}}"></script>
+    <script src=" {{ asset('assets/js/jquery.ajaxchimp.min.js')}}"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src=" {{ asset('assets/js/plugins.js')}}"></script>
+    <script src=" {{ asset('assets/js/main.js')}}"></script>
+
+    <script>
+    // Show custom alert if it exists and hide it after 2 seconds
+    document.addEventListener('DOMContentLoaded', function() {
+        const customAlert = document.getElementById('customAlert');
+        if (customAlert) {
+            customAlert.style.display = 'block'; // Show the alert
+            setTimeout(() => {
+                customAlert.style.display = 'none'; // Hide after 2 seconds
+            }, 2000); // 2000 milliseconds = 2 seconds
+        }
+    });
+    </script>
+
+</body>
+
+</html>

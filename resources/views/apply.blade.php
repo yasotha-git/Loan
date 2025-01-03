@@ -1,30 +1,31 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Finance HTML-5 Template </title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="manifest" href="site.webmanifest">
-		<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.ico')}}">
 
-		<!-- CSS here -->
-        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Finance HTML-5 Template </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.ico')}}">
 
-<link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/slicknav.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/fontawesome-all.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/themify-icons.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-   </head>
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
 
-   <body>
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slicknav.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+</head>
+
+<body>
     <!-- Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -40,31 +41,25 @@
     <header>
         <!-- Header Start -->
         <div class="header-area header-transparent">
-                <div class="main-header  header-sticky">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <!-- Logo -->
-                            <div class="col-xl-2 col-lg-2 col-md-1">
-                                <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
-                                </div>
+            <div class="main-header  header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
                             </div>
-                            <div class="col-xl-10 col-lg-10 col-md-10">
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
                             <div class="menu-main d-flex align-items-center justify-content-end">
                                 <!-- Main-menu -->
                                 <div class="main-menu f-right d-none d-lg-block">
-                                    <nav> 
-                                        <ul id="navigation">  
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="services.html">Services</a></li>
-                                            <li class="active"><a href="blog.html">Blog</a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog_details.html">Blog Details</a></li>
-                                                    <li><a href="elements.html">Element</a></li>
-                                                    <li><a href="apply.html">Apply Now</a></li>
-                                                </ul>
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="{{ route('home') }}">Home</a></li>
+                                            <li><a href="{{route('home')}}">Why</a></li>
+                                            <li><a href="{{route('faq')}}">F.A.Q</a></li>
+                                            <li><a href="{{route('fees')}}">Fees&Charges</a></li>
                                             </li>
                                             <li><a href="contact.html">Contact</a></li>
                                         </ul>
@@ -74,14 +69,14 @@
                                     <a href="#" class="btn header-btn">+880.762.009.00 </a>
                                 </div>
                             </div>
-                            </div>   
-                            <!-- Mobile Menu -->
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
         <!-- Header End -->
     </header>
@@ -110,14 +105,14 @@
                             <form action="#">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                       <div class="single-form">
+                                        <div class="single-form">
                                             <label>* LOAN AMOUNT ($) </label>
                                             <input type="text" name="" placeholder="Enter name">
-                                       </div>
+                                        </div>
                                     </div>
-                                   <!-- Nice Select -->
+                                    <!-- Nice Select -->
                                     <div class="col-lg-6">
-                                       <div class="single-form">
+                                        <div class="single-form">
                                             <label>* PURPOSE OF LOAN </label>
                                             <div class="select-option mb-10">
                                                 <select name="select" id="select1">
@@ -127,14 +122,14 @@
                                                     <option value="">Category 3</option>
                                                 </select>
                                             </div>
-                                       </div>
+                                        </div>
                                     </div>
                                     <!-- Radio -->
                                     <div class="col-lg-12">
-                                       <div class="single-form  d-flex">
+                                        <div class="single-form  d-flex">
                                             <label>* Select Gender :</label>
                                             <!--Radio Select -->
-                                           <div class="select-radio6">
+                                            <div class="select-radio6">
                                                 <div class="radio">
                                                     <input id="radio" name="radio" type="radio" checked="">
                                                     <label for="radio-6" class="radio-label">Male</label>
@@ -144,24 +139,24 @@
                                                     <label for="radio-7" class="radio-label">Female</label>
                                                 </div>
                                             </div>
-                                       </div>
+                                        </div>
                                     </div>
                                     <!-- First Name -->
                                     <div class="col-lg-6">
                                         <div class="single-form">
-                                             <label>* FIRST NAME</label>
-                                             <input type="text" name="" placeholder="Enter name">
+                                            <label>* FIRST NAME</label>
+                                            <input type="text" name="" placeholder="Enter name">
                                         </div>
-                                     </div>
-                                     <!-- Last Name -->
+                                    </div>
+                                    <!-- Last Name -->
                                     <div class="col-lg-6">
                                         <div class="single-form">
-                                             <label>* Last NAME</label>
-                                             <input type="text" name="" placeholder="Enter name">
+                                            <label>* Last NAME</label>
+                                            <input type="text" name="" placeholder="Enter name">
                                         </div>
-                                     </div>
-                                     <!-- Nice Select -->
-                                   <!-- Nice Select -->
+                                    </div>
+                                    <!-- Nice Select -->
+                                    <!-- Nice Select -->
                                     <div class="col-lg-12">
                                         <div class="single-form">
                                             <label>* NUMBER OF DEPENDANTS</label>
@@ -288,9 +283,9 @@
     </main>
     <footer>
         <!-- Footer Start-->
-        <div class="footer-area">
+        <div class="footer-area" style="background-color: #71CB78;color: #fff;">
             <div class="container">
-               <div class="footer-top footer-padding">
+                <div class="footer-top footer-padding">
                     <div class="row justify-content-between">
                         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
                             <div class="single-footer-caption mb-50">
@@ -300,20 +295,21 @@
                                         <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
                                     </div>
                                     <div class="footer-pera">
-                                        <p>Heaven fruitful doesn't over lesser days appear creeping seasons so behold bearing</p>
-                                   </div>
+                                        <p style="color: #fff;">Heaven fruitful doesn't over lesser days appear creeping
+                                            seasons so behold bearing</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>Quick Link</h4>
+                                    <h4>ABOUT</h4>
                                     <ul>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Offers & Discounts</a></li>
-                                        <li><a href="#">Get Coupon</a></li>
-                                        <li><a href="#"> Contact Us</a></li>
+                                        <li><a href="{{route('home')}}" style="color: #fff;">Why</a></li>
+                                        <li><a href="{{route('terms')}}" style="color: #fff;">Financial Rudiments</a>
+                                        </li>
+                                        <li><a href="{{route('faq')}}" style="color: #fff;">FAQ</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -321,12 +317,12 @@
                         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>New Products</h4>
+                                    <h4>CONDITIONS</h4>
                                     <ul>
-                                        <li><a href="#">Woman Cloth</a></li>
-                                        <li><a href="#">Fashion Accessories</a></li>
-                                        <li><a href="#">Man Accessories</a></li>
-                                        <li><a href="#">Rubber made Toys</a></li>     
+                                        <li><a href="{{route('fees')}}" style="color: #fff;">Fees & Charges</a></li>
+                                        <li><a href="{{route('privacy')}}" style="color: #fff;">Privacy Policy</a></li>
+                                        <li><a href="{{route('terms')}}" style="color: #fff;"> Terms And Conditions</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -334,79 +330,110 @@
                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>Support</h4>
+                                    <h4>QUICK LINKS</h4>
                                     <ul>
-                                        <li><a href="#">Frequently Asked Questions</a></li>
-                                        <li><a href="#">Terms & Conditions</a></li>
-                                        <li><a href="#"> Privacy Policy</a></li>
-                                        <li><a href="#">Report a Payment Issue</a></li>     
+                                        <li><a href="#" style="color: #fff;">Apply Online</a></li>
+                                        <li><a href="#" style="color: #fff;">Authorization Code</a></li>
+                                        <li><a href="#" style="color: #fff;">Lenders</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+
+
+
+
                     </div>
-               </div>
+                    <div class="row">
+
+                        <p style="font-style:italic;color: #fff"><span style="font-weight:800;color: #fff;"> DISCLAIMER
+                            </span>: Speedyloanoline is neither banking nor lending institution per se. The information
+                            you share on this website and with our consultants is used for the sole purpose of
+                            recommending apt financiers from our network based on your personal requirement and credit
+                            ratings. Your emails and phone numbers will not be shared to other parties or institutions.
+                            We will not send you any promotional or marketing related material. Your document submission
+                            does not automatically construe an approval. However, your paperwork will be scrutinized
+                            before giving you a decision on our approval. No fee or surcharge is levied for this
+                            service. We neither store nor share any personal and sensitive information such as: social
+                            security numbers, credit/debit card details, and other banking information. However, you
+                            acknowledge that we will share information pertaining to financiers within our business
+                            network so that you can interact with the lenders directly as we do not represent you in any
+                            financial matters or transactions with the lenders. By using this website and our services,
+                            you consent to the terms, conditions, and policies. Also, we would like you to be cognizant
+                            of the fact that moneylenders from our network may not offer their service to certain
+                            states. Finally, we strongly recommend that you acquaint yourself with our privacy
+                            procedures and other disclaimers before using our services.
+                        </p>
+                    </div>
+                </div>
                 <div class="footer-bottom">
                     <div class="row d-flex justify-content-between align-items-center">
                         <div class="col-xl-9 col-lg-8">
                             <div class="footer-copy-right">
-                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                <p style="color: #fff;">
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>
+                                    document.write(new Date().getFullYear());
+                                    </script> All rights reserved | This template is made with <i class="fa fa-heart"
+                                        aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"
+                                        style="color: #fff;">Colorlib</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4">
                             <!-- Footer Social -->
                             <div class="footer-social f-right">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fas fa-globe"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter" style="color: #fff;"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f" style="color: #fff;"></i></a>
+                                <a href="#"><i class="fas fa-globe" style="color: #fff;"></i></a>
+                                <a href="#"><i class="fab fa-instagram" style="color: #fff;"></i></a>
                             </div>
                         </div>
                     </div>
-               </div>
+                </div>
             </div>
         </div>
         <!-- Footer End-->
     </footer>
     <!-- Scroll Up -->
-    <div id="back-top" >
+    <div id="back-top">
         <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
     </div>
 
     <!-- JS here -->
-		<!-- All JS Custom Plugins Link Here here -->
-        <script src=" {{ asset('assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
-		<!-- Jquery, Popper, Bootstrap -->
-		<script src=" {{ asset('assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
-        <script src=" {{ asset('assets/js/popper.min.js')}}"></script>
-        <script src=" {{ asset('assets/js/bootstrap.min.js')}}"></script>
-	    <!-- Jquery Mobile Menu -->
-        <script src=" {{ asset('assets/js/jquery.slicknav.min.js')}}"></script>
+    <!-- All JS Custom Plugins Link Here here -->
+    <script src=" {{ asset('assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src=" {{ asset('assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
+    <script src=" {{ asset('assets/js/popper.min.js')}}"></script>
+    <script src=" {{ asset('assets/js/bootstrap.min.js')}}"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src=" {{ asset('assets/js/jquery.slicknav.min.js')}}"></script>
 
-		<!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src=" {{ asset('assets/js/owl.carousel.min.js')}}"></script>
-        <script src=" {{ asset('assets/js/slick.min.js')}}"></script>
-		<!-- One Page, Animated-HeadLin -->
-        <script src=" {{ asset('assets/js/wow.min.js')}}"></script>
-		<script src=" {{ asset('assets/js/animated.headline.js')}}"></script>
-        <script src=" {{ asset('assets/js/jquery.magnific-popup.js')}}"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src=" {{ asset('assets/js/owl.carousel.min.js')}}"></script>
+    <script src=" {{ asset('assets/js/slick.min.js')}}"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src=" {{ asset('assets/js/wow.min.js')}}"></script>
+    <script src=" {{ asset('assets/js/animated.headline.js')}}"></script>
+    <script src=" {{ asset('assets/js/jquery.magnific-popup.js')}}"></script>
 
-		<!-- Nice-select, sticky -->
-        <script src=" {{ asset('assets/js/jquery.nice-select.min.js')}}"></script>
-		<script src=" {{ asset('assets/js/jquery.sticky.js')}}"></script>
-        
-        <!-- contact js -->
-        <script src=" {{ asset('assets/js/contact.js')}}"></script>
-        <script src=" {{ asset('assets/js/jquery.form.js')}}"></script>
-        <script src=" {{ asset('assets/js/jquery.validate.min.js')}}"></script>
-        <script src=" {{ asset('assets/js/mail-script.js')}}"></script>
-        <script src=" {{ asset('assets/js/jquery.ajaxchimp.min.js')}}"></script>
-        
-		<!-- Jquery Plugins, main Jquery -->	
-        <script src=" {{ asset('assets/js/plugins.js')}}"></script>
-        <script src=" {{ asset('assets/js/main.js')}}"></script>
-        
-    </body>
+    <!-- Nice-select, sticky -->
+    <script src=" {{ asset('assets/js/jquery.nice-select.min.js')}}"></script>
+    <script src=" {{ asset('assets/js/jquery.sticky.js')}}"></script>
+
+    <!-- contact js -->
+    <script src=" {{ asset('assets/js/contact.js')}}"></script>
+    <script src=" {{ asset('assets/js/jquery.form.js')}}"></script>
+    <script src=" {{ asset('assets/js/jquery.validate.min.js')}}"></script>
+    <script src=" {{ asset('assets/js/mail-script.js')}}"></script>
+    <script src=" {{ asset('assets/js/jquery.ajaxchimp.min.js')}}"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src=" {{ asset('assets/js/plugins.js')}}"></script>
+    <script src=" {{ asset('assets/js/main.js')}}"></script>
+
+</body>
+
 </html>
